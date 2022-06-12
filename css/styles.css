@@ -11,10 +11,14 @@ body{
     color: var(--primary-color);
     background-color: #FFFFFF;
 }
+.wrapper{
+    width: 1600px;
+    margin: 0 auto;
+}
+
 /*шапка сайта*/
 header{
     height: 80px;
-    width: 1600px;
     display: flex;    
 }
 .nav{
@@ -52,7 +56,6 @@ header{
     margin-left: 50px;
 }
 .nav-link{
-    font-family: 'Roboto';
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -84,6 +87,9 @@ header{
     margin-left: 230px;
     margin-right: 50px;
 }
+.auth-nav-link:active{
+    color: var(--accent-color);
+}
 .auth-nav-link{
     font-family: var(--primary-font);
     text-decoration: none;
@@ -91,19 +97,26 @@ header{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.88;
-    letter-spacing: 0.02em;    
+    letter-spacing: 0.02em;
+
+}
+.auth-nav-link:hover{
+    color: var(--accent-color);
+}
+.auth-nav-link:focus{
+    color: var(--accent-color);
 }
 /*уникальная часть первой страницы*/
-
+ 
 .hero{
     width: 1600px;
     height: 600px;
     text-align: center;
     align-items: center;
     background-color: #2F303A;
+    position: relative;
 }
 .hero-text{
-    display: block;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -111,7 +124,7 @@ header{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 200px 350px ;
+    padding-top: 200px;
 }
 .button-form{
     font-family:inherit;
@@ -126,14 +139,15 @@ header{
     padding: 6px 22px 6px 22px;
     border-radius: 4px;
     position: absolute;
-    top: 85%;    
+    top: 70%;    
     transform: translate(-50%, -50%);         
 }
 .about{
-    width: 1170px;
     height: 200px;
+    width: 1170px;
     padding-left: 215px;
-    margin-top: 95px;
+    padding-top: 215px;
+    padding-top: 95px;
     display: flex;
 }
 .hide{
@@ -141,22 +155,18 @@ header{
 }
 .about-link{
     list-style-type: none;
-    display: block;
     width: 23%;
-    margin-right: 20px;
+    margin-right: 18px;
 }
 .about-title{
-    font-family: var(--primary-font);
     font-style: normal;
-    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
-    color: var(--primary-color);
 }
 .about-text{
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -165,12 +175,10 @@ header{
     color: #757575;
 }
 .work{
-    width: 1170px;
+    width: 1600px;
     height: 570px;
-    padding-left: 215px;
 }
-.work-heading{
-    font-family: 'Roboto';
+.section-title{
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -180,30 +188,21 @@ header{
     color: #212121;
 }
 .work-block{
-    display: flex;
-    padding-left: 0;    
+    text-align: center;    
     list-style-type: none;
-    padding-top: 80px;
+    padding-top: 80px; 
 }
 .work-link{
     width: 30%;
     margin-right: 30px;
+    display: inline;
+    text-align: center;    
 }
 .section-foto{
     width: 1600px;
     height: 648px;
     padding-top: 95px;
     background-color: #F5F4FA;
-}
-.foto-heading{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #212121;
 }
 .foto{
     display: flex;
@@ -216,11 +215,35 @@ header{
 .foto-link{
     width: 23%;
     margin-right: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+.foto-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    
+    letter-spacing: 0.03em;
+}
+.foto-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #757575;
 }
 /*уникальная часть портфолио*/
 .filter{
+    width: 1170px;
     text-align: center;
-    padding-left: 280px;    
+    padding-left: 215px;
+    padding-right: 215px;    
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
 }
 .button-filter{
     font-family:inherit;
@@ -247,6 +270,7 @@ header{
     padding-left: 215px;
     padding-right: 215px;    
     flex-wrap: wrap;
+    
 }
 .presentation-block{
     list-style-type: none; 
@@ -254,12 +278,10 @@ header{
     width: 30%;
     margin-right: 35px;
     margin-bottom: 30px;
+    border: 1px solid #EEEEEE;
 }
-h2{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+.div-presentation{
+    padding: 15px;
 }
 p{
     font-weight: 400;
@@ -267,6 +289,9 @@ p{
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: #757575;
+}
+.img-width{
+    width: 100%;
 }
 footer{
     width: 1600px;
@@ -312,4 +337,22 @@ footer{
     line-height: 1.7px;
     letter-spacing: 0.03em;
     color:rgba(255,255,255,0.6);
+}
+.adress-post:hover{
+    color: var(--accent-color);
+}
+.adress-post:focus{
+    color: var(--accent-color);
+}
+.adress-post:active{
+    color: var(--accent-color);
+}
+.email:hover{
+    color: var(--accent-color);
+}
+.email:focus{
+    color: var(--accent-color);
+}
+.email:active{
+    color: var(--accent-color);
 }
